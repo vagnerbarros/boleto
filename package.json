@@ -1,0 +1,31 @@
+{
+  "name": "boleto",
+  "version": "1.0.0",
+  "description": "Microserviço para geração de boletos bancários a partir dos dados recebidos via POST. Projeto consiste de uma API Rest utilizando o Express. A persistência é feita utilizando o banco não relacional MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --exit './test'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vagnerbarros/boleto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vagnerbarros/boleto/issues"
+  },
+  "homepage": "https://github.com/vagnerbarros/boleto#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.1",
+    "mongoose": "^5.7.1"
+  }
+}
