@@ -1,13 +1,15 @@
 const repositorio = require('../repositorio/RepositorioBoleto');
+const Boleto = require('../schemas/Boleto');
 const Exception = require('../exception/Exception');
 
 class ModelBoleto{
 
-    cadastrar(){
+    cadastrar(boleto){
 
         try{
             
-            repositorio.salvar();
+            let novoBoleto = Boleto(boleto);
+            return repositorio.salvar(novoBoleto);
         }
         catch(erro){
             throw erro;

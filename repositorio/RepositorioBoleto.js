@@ -4,11 +4,11 @@ const Exception = require('../exception/Exception');
 class RepositorioBoleto{
 
 
-    salvar(boleto){
+    async salvar(boleto){
 
         try{
 
-            return Boleto.save(boleto).exec();
+            return await boleto.save(boleto);
         }
         catch(erro){
             throw new Exception(500, erro.message);

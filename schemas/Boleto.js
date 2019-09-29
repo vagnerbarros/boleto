@@ -2,9 +2,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var boletoSchema = new Schema({
-  codigo: String,
-  descricao: String,
-  empresa: { type: Schema.Types.ObjectId, ref: "empresa", required: true }
+  banco: String,
 });
 
 var Boleto = mongoose.model("boleto", boletoSchema);

@@ -6,6 +6,8 @@ class ControllerBoleto{
 
         let boleto = request.body;
 
+        console.log(boleto);
+
         modelBoleto.cadastrar(boleto)
         .then(result => {
             response.status(200).send(result);

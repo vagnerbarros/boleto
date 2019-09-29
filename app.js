@@ -18,8 +18,10 @@ const database = require('./util/dbConnect');
 database.connectar();
 
 const routerBoleto = require('./routes/boleto');
+const routerUsuario = require('./routes/usuario');
 
 app.use(routerBoleto);
+app.use(routerUsuario);
 
 const API_PORT = process.env.API_PORT || 3000;
 const AMBIENTE = process.env.NODE_ENV || 'production';
