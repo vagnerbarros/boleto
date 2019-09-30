@@ -6,4 +6,6 @@ var controller = require('../controller/controller');
 
 router.post('/boletos', verificarToken, controller.boleto.cadastrar);
 
+router.get('/boletos', verificarToken, controller.boleto.gerar);
+
 module.exports = router;

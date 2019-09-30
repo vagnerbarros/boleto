@@ -6,8 +6,6 @@ class ControllerBoleto{
 
         let boleto = request.body;
 
-        console.log(boleto);
-
         modelBoleto.cadastrar(boleto)
         .then(result => {
             response.status(200).send(result);
@@ -15,6 +13,17 @@ class ControllerBoleto{
         .catch(erro => {
             response.status(erro.codigo).send(erro);
         })
+    }
+
+    gerar(request, response){
+
+        modelBoleto.gerar()
+        .then(result => {
+            response.status(200).send(result);
+        }) 
+        .catch(erro => {
+            response.status(erro.codigo).send(erro);
+        });    
     }
 }
 
